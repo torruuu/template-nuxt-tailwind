@@ -1,0 +1,12 @@
+{
+  "editor.tabSize": 2,
+  "files.eol": "\r\n",
+  "eslint.enable": true,
+  "stylelint.enable": true,
+  "eslint.validate": ["js","ts","json","vue"],
+  "stylelint.validate": ["css","vue","tailwindcss"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always",
+    "source.fixAll.stylelint": "always"
+  },
+}

@@ -1,0 +1,69 @@
+{
+  "extends": ["stylelint-prettier/recommended", "stylelint-config-recommended"],
+  "rules": {
+    "unit-allowed-list": [
+      "em",
+      "rem",
+      "vh",
+      "vw",
+      "%",
+      "s",
+      "deg",
+      "fr",
+      "pt",
+      "ch",
+      "ms",
+      "dvh",
+      "dvw"
+    ],
+    "import-notation": null,
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "theme",
+          "source",
+          "utility",
+          "variant",
+          "custom-variant",
+          "plugin",
+          "tailwind",
+          "apply",
+          "layer",
+          "config",
+          "variants",
+          "responsive",
+          "screen"
+        ]
+      }
+    ],
+    "function-no-unknown": [
+      true,
+      {
+        "ignoreFunctions": ["theme"]
+      }
+    ],
+    "rule-empty-line-before": [
+      "always-multi-line",
+      {
+        "except": ["inside-block"]
+      }
+    ],
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": ["inside-block"]
+      }
+    ],
+    "font-family-no-missing-generic-family-keyword": null,
+    "declaration-no-important": true
+  },
+  "overrides": [
+    {
+      "files": ["*.vue", "**/*.vue"],
+      "customSyntax": "postcss-html"
+    }
+  ],
+  "defaultSeverity": "error",
+  "ignoreFiles": ["node_modules/*", "dist/**/*"]
+}
