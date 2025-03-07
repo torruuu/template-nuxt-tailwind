@@ -17,6 +17,7 @@
       "dvw"
     ],
     "import-notation": null,
+    "at-rule-no-deprecated": null,
     "at-rule-no-unknown": [
       true,
       {
@@ -46,14 +47,14 @@
     "rule-empty-line-before": [
       "always-multi-line",
       {
-        "except": ["inside-block"]
+        "except": ["inside-block"],
+        "ignore": ["after-comment"]
       }
     ],
     "at-rule-empty-line-before": [
       "always",
       {
-        "except": ["inside-block"],
-        "ignoreAtRules": ["import"]
+        "except": ["inside-block", "blockless-after-same-name-blockless"]
       }
     ],
     "font-family-no-missing-generic-family-keyword": null,
