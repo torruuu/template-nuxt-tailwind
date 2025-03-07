@@ -52,7 +52,8 @@
     "at-rule-empty-line-before": [
       "always",
       {
-        "except": ["inside-block"]
+        "except": ["inside-block"],
+        "ignoreAtRules": ["import"]
       }
     ],
     "font-family-no-missing-generic-family-keyword": null,

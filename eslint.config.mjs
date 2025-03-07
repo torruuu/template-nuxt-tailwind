@@ -14,7 +14,7 @@ export default withNuxt(
     },
   },
   {
-    files: ['*.vue', '*.js', '*.ts'],
+    files: ['*.vue', '**/*.vue', '*.js', '**/*.js', '*.ts', '**/*.ts'],
     rules: {
       'prettier/prettier': RULES.ERROR,
       'arrow-spacing': RULES.ERROR,
@@ -45,6 +45,24 @@ export default withNuxt(
       'vue/multi-word-component-names': RULES.OFF,
       'vue/no-setup-props-destructure': RULES.OFF,
       'vue/no-v-text-v-html-on-component': RULES.OFF,
+      'vue/attributes-order': [RULES.ERROR, { alphabetical: true, order:
+        [
+          'DEFINITION',
+          'LIST_RENDERING',
+          'CONDITIONALS',
+          'RENDER_MODIFIERS',
+          'GLOBAL',
+          'UNIQUE',
+          'SLOT',
+          'TWO_WAY_BINDING',
+          'OTHER_DIRECTIVES',
+          'ATTR_DYNAMIC',
+          'ATTR_STATIC',
+          'ATTR_SHORTHAND_BOOL',
+          'EVENTS',
+          'CONTENT',
+        ],
+       }],
     },
   },
   {
