@@ -4,6 +4,5 @@
   "bracketSpacing": true,
   "semi": false,
   "tabWidth": 2,
-  "endOfLine": "crlf",
   "plugins": ["prettier-plugin-organize-imports", "prettier-plugin-tailwindcss"]
 }
