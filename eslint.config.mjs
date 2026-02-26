@@ -14,11 +14,14 @@ export default withNuxt(
     },
   },
   {
-    files: ['*.vue', '**/*.vue', '*.js', '**/*.js', '*.ts', '**/*.ts'],
+    files: ['*.vue', '**/*.vue', '*.js', '**/*.js'],
     rules: {
       'prettier/prettier': RULES.ERROR,
       'arrow-spacing': RULES.ERROR,
-      'no-unused-vars': [RULES.ERROR, { args: 'all' }],
+      'no-unused-vars': [
+        RULES.ERROR,
+        { args: 'all', argsIgnorePattern: '^_', caughtErrorsIgnorePattern: '^_' },
+      ],
       'object-curly-spacing': [RULES.ERROR, 'always'],
       'array-callback-return': [RULES.OFF, { checkForEach: true }],
       'no-return-assign': RULES.OFF,
@@ -45,6 +48,7 @@ export default withNuxt(
       'vue/multi-word-component-names': RULES.OFF,
       'vue/no-setup-props-destructure': RULES.OFF,
       'vue/no-v-text-v-html-on-component': RULES.OFF,
+      'vue/require-explicit-emits': RULES.OFF,
       'vue/attributes-order': [
         RULES.ERROR,
         {
@@ -70,6 +74,13 @@ export default withNuxt(
     },
   },
   {
-    ignores: ['dist', 'node_modules', '.env', 'package.json', 'package-lock.json'],
+    ignores: [
+      'dist',
+      'node_modules',
+      '.env',
+      'package.json',
+      'package-lock.json',
+      'components.d.ts',
+    ],
   },
 )
