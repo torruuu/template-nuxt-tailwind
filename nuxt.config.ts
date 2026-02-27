@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
   vite: {
-    // @ts-expect-error - tailwindcss is a valid plugin
+    // @ts-expect-error - tailwindcss is a valid plugin (bug with tailwind and vite versions)
     plugins: [tailwindcss()],
   },
   typescript: {
