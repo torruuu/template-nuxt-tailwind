@@ -73,3 +73,16 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+# TypeScript
+
+Si no deseas usar TypeScript, elimina la dependencia `typescript` de tu `package.json` y añade la siguiente configuración en `nuxt.config.ts`:
+
+```ts
+export default defineNuxtConfig({
+  eslint: {
+    config: {
+      typescript: false,
+    },
+  },
+});

@@ -4,12 +4,15 @@
   "files.associations": {
     "*.css": "tailwindcss"
   },
-  "eslint.enable": true,
   "stylelint.enable": true,
-  "eslint.validate": ["js", "ts", "json", "vue"],
+  "eslint.enable": true,
   "stylelint.validate": ["css", "vue", "tailwindcss"],
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "vue"
+  ],
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "always",
-    "source.fixAll.stylelint": "always"
+    "source.fixAll.eslint": "always"
   }
 }

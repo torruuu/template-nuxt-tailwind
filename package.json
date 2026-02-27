@@ -8,6 +8,9 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "typecheck": "vue-tsc --noEmit",
     "prepare": "husky || true"
   },
   "dependencies": {
@@ -20,7 +23,9 @@
   "devDependencies": {
     "@commitlint/cli": "^20.4.2",
     "@commitlint/config-conventional": "^20.4.2",
+    "@eslint/js": "^9.39.3",
     "@nuxt/eslint": "^1.15.2",
+    "eslint": "^9.39.3",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
     "husky": "^9.1.7",
@@ -31,6 +36,8 @@
     "prettier-plugin-tailwindcss": "^0.7.2",
     "stylelint": "^17.4.0",
     "stylelint-config-recommended": "^18.0.0",
-    "stylelint-prettier": "^5.0.3"
+    "stylelint-prettier": "^5.0.3",
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.2.5"
   }
 }

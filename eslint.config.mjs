@@ -1,4 +1,6 @@
-import prettierPlugin from 'eslint-plugin-prettier'
+import js from '@eslint/js'
+import eslintConfigPrettier from 'eslint-config-prettier'
+import eslintPluginPrettier from 'eslint-plugin-prettier/recommended'
 import withNuxt from './.nuxt/eslint.config.mjs'
 
 const RULES = {
@@ -8,16 +10,12 @@ const RULES = {
 }
 
 export default withNuxt(
+  eslintConfigPrettier,
+  eslintPluginPrettier,
   {
-    plugins: {
-      prettier: prettierPlugin,
-    },
-  },
-  {
-    files: ['*.vue', '**/*.vue', '*.js', '**/*.js'],
+    files: ['*.vue', '**/*.vue', '*.js', '**/*.js', '*.ts', '**/*.ts'],
+    extends: [js.configs.recommended],
     rules: {
-      'prettier/prettier': RULES.ERROR,
-      'arrow-spacing': RULES.ERROR,
       'no-unused-vars': [
         RULES.ERROR,
         { args: 'all', argsIgnorePattern: '^_', caughtErrorsIgnorePattern: '^_' },
@@ -25,7 +23,6 @@ export default withNuxt(
       'object-curly-spacing': [RULES.ERROR, 'always'],
       'array-callback-return': [RULES.OFF, { checkForEach: true }],
       'no-return-assign': RULES.OFF,
-      'no-mixed-operators': RULES.OFF,
       'no-undef': RULES.OFF,
 
       'vue/html-indent': RULES.ERROR,
@@ -71,16 +68,11 @@ export default withNuxt(
           ],
         },
       ],
+
+      '@typescript-eslint/no-unused-vars': RULES.OFF,
     },
   },
   {
-    ignores: [
-      'dist',
-      'node_modules',
-      '.env',
-      'package.json',
-      'package-lock.json',
-      'components.d.ts',
-    ],
+    ignores: ['dist', 'node_modules', '.env', '.nuxt', '.output', 'components.d.ts'],
   },
 )

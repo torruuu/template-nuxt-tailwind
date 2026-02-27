@@ -4,15 +4,12 @@ export default defineNuxtConfig({
   modules: ['@nuxt/eslint'],
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
-
-  // Remove the following property to use typescript eslint
-  eslint: {
-    config: {
-      typescript: false,
-    },
-  },
   vite: {
+    // @ts-expect-error - tailwindcss is a valid plugin
     plugins: [tailwindcss()],
   },
-  compatibilityDate: '2024-11-01',
+  typescript: {
+    typeCheck: true,
+  },
+  compatibilityDate: '2026-02-27',
 })
