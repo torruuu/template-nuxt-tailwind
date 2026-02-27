@@ -76,7 +76,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 # TypeScript
 
-Si no deseas usar TypeScript, elimina la dependencia `typescript` de tu `package.json`, eliminar ts de `app.vue` y añade la siguiente configuración en `nuxt.config.ts`:
+Si no deseas usar TypeScript, elimina la dependencia `typescript` de tu `package.json`, eliminar ts de `app.vue`, eliminar comandos de `.lintstaged.mjs` y `package.json` y añade la siguiente configuración en `nuxt.config.ts`:
 
 ```ts
 export default defineNuxtConfig({
